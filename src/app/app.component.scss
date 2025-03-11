@@ -1,0 +1,154 @@
+/* Main Content Styles */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.info-card {
+  background: var(--cardColor);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adjusted for better spacing */
+  overflow: hidden;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0rem 0.125rem 0.125rem 0rem var(--shadow-color);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+/* Card Header */
+.card-summary-header {
+  background: linear-gradient(
+      180deg,
+      var(--cardHighlight) 50%,
+      var(--cardColor) 50%
+  );
+  padding: 15px 15px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+
+  > * {
+    margin: 0;
+  }
+}
+
+.image-1 {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 104 / 64; /* Modern property for consistent scaling */
+}
+
+.content-summary {
+  flex-grow: 1;
+}
+
+.content-summary-text {
+  font-size: 0.875rem;
+  color: var(--secondary-color);
+}
+
+/* Card Body */
+.card-body {
+  padding: 0 15px 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  background: var(--cardColor);
+}
+
+.card-body-text {
+  font-size: 0.95rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Navigation */
+.navigation {
+  background: var(--cardHighlight);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  padding: 10px;
+  display: flex;
+  gap: 10px; /* Better spacing between buttons */
+  justify-content: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.link-button {
+  background: var(--bgColor);
+  color: var(--textColor);
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 0 1rem;
+  text-align: center;
+  line-height: 2rem;
+  height: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  background: var(--cardColor);
+  color: var(--textColor);
+  transform: translateY(-2px);
+}
+
+.button-text {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Utility Classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+.content-flex {
+  display: flex;
+  gap: 10px;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    width: auto;
+  }
+
+  .link-button {
+    width: 100%;
+    padding: 10px;
+  }
+}

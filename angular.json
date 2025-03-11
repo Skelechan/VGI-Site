@@ -27,9 +27,14 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -92,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
