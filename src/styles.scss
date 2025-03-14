@@ -46,13 +46,20 @@ body.light {
 
 :root {
   --shadow-color: rgba(0, 0, 0, 0.25);
-  --border-radius: 10px;
+  --border-radius: 0.5rem;
   --transition-duration: 0.3s;
+  --gradientPercentage: 40%
 }
-
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 13pt;
+  font-family: "Inconsolata", monospace;
 }
 
 body {
@@ -63,37 +70,57 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size:0.875em;
-  line-height: 1.25;
+  line-height: 1;
   transition: background-color var(--transition-duration), transform var(--transition-duration);
 }
 
-p {
-  font-family: "Inconsolata", monospace;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size:0.875em;
-  line-height: 1.25;
-}
-
-
-.header {
+h1 {
   font-weight: 600;
-  font-size: 1.25em;
+  line-height: 1.5;
+  font-size: 1.25rem;
 }
 
-.m0 {
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-end {
+  align-items: flex-end;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-gap {
+  gap: 10px;
+}
+
+.flex-gap-sm {
+  gap: 0.875rem;
+}
+
+.margin-none {
   margin: 0;
 }
 
-@media (max-width: 1680px) {
-  html {
-    font-size: 9pt;
-  }
-}
-
-@media (max-width: 980px) {
-  html {
-    font-size: 8pt;
-  }
+.padding-none {
+  margin: 0;
 }

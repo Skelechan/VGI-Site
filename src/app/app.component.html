@@ -1,50 +1,41 @@
-<button type="button" (click)="changeTheme()">Switch Theme</button>
-
-<main class="main-content">
-  <!-- Card Section -->
-  <section class="info-card">
-    <!-- Header Section -->
-    <header class="card-summary-header">
-      <div class="content-flex flex-end">
-        <img class="image-1" src="logo.png" alt="VGI Logo" />
-        <div class="content-summary">
-          <h1 class="header m0">VGI</h1>
-          <p class="content-summary-text m0">
-            Unofficial Content Creator Circle
-          </p>
+<main class="flex flex-center main-content">
+  <div class="inner">
+    <!-- Card Section -->
+    <section class="flex flex-column info-card">
+      <!-- Header Section -->
+      <header class="flex flex-row card-summary-header">
+        <div class="flex flex-row flex-gap flex-end">
+          <img class="image-1" src="logo.png" alt="VGI Logo"/>
+          <div class="content-summary">
+            <h1 class="margin-none">VGI</h1>
+            <p class="content-summary-text margin-none">
+              Unofficial Content Creator Circle
+            </p>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <!-- Body Section -->
-    <article class="card-body">
-      <div class="content-flex flex-center">
-        <div class="card-body-text">
-          <strong>Good Morning ☆</strong>
-          <p>
-            VGI is a diverse collective of silly but passionate friends brought
-            together by their love of creating!
-          </p>
-          <p>
-            In this group, you’ll find streamers, vtubers, artists, animators,
-            gamers, graphic designers, and other creators.
-          </p>
-          <p>Don’t be shy, and check us out!</p>
-        </div>
-      </div>
-    </article>
-  </section>
+      <!-- Body Section -->
+      <app-home class="flex flex-column card-body"></app-home>
+    </section>
 
-  <!-- Navigation Links -->
-  <nav class="navigation">
-    <a href="https://vvgi.carrd.co/#creators" class="link-button">
-      <span class="button-text">Creators</span>
-    </a>
-    <a href="https://vvgi.carrd.co/#members" class="link-button">
-      <span class="button-text">Members</span>
-    </a>
-    <a href="https://vvgi.carrd.co/#credits" class="link-button">
-      <span class="button-text">Credit</span>
-    </a>
-  </nav>
+    <!-- Navigation Links -->
+    <nav class="flex flex-column flex-gap navigation">
+      <div class="navigation-title"><strong>Navigate here</strong></div>
+      <div class="flex flex-row flex-gap-sm button-container">
+          <a href="https://vvgi.carrd.co/#creators" class="button">
+            <span class="button-text">Creators</span>
+          </a>
+          <a href="https://vvgi.carrd.co/#members" class="button">
+            <span class="button-text">Members</span>
+          </a>
+          <a href="https://vvgi.carrd.co/#credit" class="button">
+            <span class="button-text">Credit</span>
+          </a>
+          <div (click)="changeTheme()" class="button">
+            <span class="button-text">Change Theme</span>
+          </div>
+      </div>
+    </nav>
+  </div>
 </main>
