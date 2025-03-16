@@ -1,41 +1,26 @@
-<main class="flex flex-center main-content">
-  <div class="inner">
+<main class="d-flex flex-center justify-content-center main-content w-100 mb-1 z-1">
+  <div class="inner w-33">
     <!-- Card Section -->
-    <section class="flex flex-column info-card">
+    <section class="d-flex flex-column info-card mb-1-125">
       <!-- Header Section -->
-      <header class="flex flex-row card-summary-header">
-        <div class="flex flex-row flex-gap flex-end">
-          <img class="image-1" src="logo.png" alt="VGI Logo"/>
-          <div class="content-summary">
-            <h1 class="margin-none">VGI</h1>
-            <p class="content-summary-text margin-none">
+      <header class="d-flex flex-row card-summary-header text-left">
+        <div class="d-flex flex-row flex-gap flex-end">
+          <img class="logo-img" src="logo.png" alt="VGI Logo"/>
+          <div class="flex-grow">
+            <h1 class="m0">VGI</h1>
+            <p class="content-summary-text m0">
               Unofficial Content Creator Circle
             </p>
           </div>
         </div>
       </header>
 
+      <hr>
       <!-- Body Section -->
-      <app-home class="flex flex-column card-body"></app-home>
+      <router-outlet></router-outlet>
     </section>
 
     <!-- Navigation Links -->
-    <nav class="flex flex-column flex-gap navigation">
-      <div class="navigation-title"><strong>Navigate here</strong></div>
-      <div class="flex flex-row flex-gap-sm button-container">
-          <a href="https://vvgi.carrd.co/#creators" class="button">
-            <span class="button-text">Creators</span>
-          </a>
-          <a href="https://vvgi.carrd.co/#members" class="button">
-            <span class="button-text">Members</span>
-          </a>
-          <a href="https://vvgi.carrd.co/#credit" class="button">
-            <span class="button-text">Credit</span>
-          </a>
-          <div (click)="changeTheme()" class="button">
-            <span class="button-text">Change Theme</span>
-          </div>
-      </div>
-    </nav>
+    <app-navigation></app-navigation>
   </div>
 </main>

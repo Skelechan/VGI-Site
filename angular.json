@@ -27,12 +27,18 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/theme-dark.scss",
+              "src/theme-light.scss",
+              "src/utility-styles.scss"
             ],
             "scripts": [],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/styles"
+                "src/styles",
+                "src/theme-dark.scss",
+                "src/theme-light.scss",
+                "src/utility-styles.scss"
               ]
             }
           },

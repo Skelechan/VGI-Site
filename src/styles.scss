@@ -1,54 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-$bgColor_light: #FAFAFA;
-$bgColor_dark: #121212;
-
-$cardColor_light: #ffffff;
-$cardColor_dark: #282828;
-
-$cardHighlight_light: #f0f0f0;
-$cardHighlight_dark: #3f3f3f;
-
-$textColor_light: #4F4F4F;
-$textColor_dark: #F4F4F4;
-
-$button_light: #d3d3d3;
-$button_dark: #575757;
-
-$shadow_light: rgba(0, 0, 0, 0.25);
-$shadow_dark: rgba(255,255,255, 0.25);
-
-// mixin that enables css variables in light mode
-@mixin lighten() {
-  --bgColor: #{$bgColor_light};
-  --cardColor: #{$cardColor_light};
-  --cardHighlight: #{$cardHighlight_light};
-  --textColor: #{$textColor_light};
-  --buttonColor: #{$button_light};
-  --shadow-color: #{$shadow_light};
-}
-
-// mixin that enables css variables in dark mode
-@mixin darken() {
-  --bgColor: #{$bgColor_dark};
-  --cardColor: #{$cardColor_dark};
-  --cardHighlight: #{$cardHighlight_dark};
-  --textColor: #{$textColor_dark};
-  --buttonColor: #{$button_dark};
-  --shadow-color: #{$shadow_dark};
-}
-
-body.dark {
-  @include darken();
-}
-body.light {
-  @include lighten();
-}
-
 :root {
-  --shadow-color: rgba(0, 0, 0, 0.25);
   --border-radius: 0.5rem;
   --transition-duration: 0.3s;
-  --gradientPercentage: 40%
+  --gradientPercentage: 40%;
 }
 
 * {
@@ -69,7 +22,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size:0.875em;
+  font-size: 0.875em;
   line-height: 1;
   transition: background-color var(--transition-duration), transform var(--transition-duration);
 }
@@ -87,40 +40,24 @@ h1 {
   z-index: 2;
 }
 
-/* Utility Classes */
-.flex {
-  display: flex;
+hr {
+  display: block;
+  position: relative;
+  margin: 0.875rem 1.25rem 0.5rem;
+  height: 0;
+  max-height: 0;
+  font-size: 1px;
+  line-height: 0;
+  clear: both;
+  border: none;
+  border-top: 1px solid var(--cardHighlight);
+  border-bottom: 1px solid var(--cardColor);
 }
 
-.flex-center {
-  align-items: center;
-  justify-content: center;
+a {
+  color: var(--textColor);
 }
 
-.flex-end {
-  align-items: flex-end;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.flex-gap {
-  gap: 10px;
-}
-
-.flex-gap-sm {
-  gap: 0.875rem;
-}
-
-.margin-none {
-  margin: 0;
-}
-
-.padding-none {
-  margin: 0;
+a:hover {
+  color: var(--vgiBlue);
 }

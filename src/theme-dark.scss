@@ -1,0 +1,17 @@
+// mixin that enables css variables in dark mode
+@mixin darken() {
+  --bgColor: rgb(18, 18, 18);
+  --cardColor: rgb(40, 40, 40);
+  --cardHighlight: rgb(63, 63, 63);
+  --textColor: rgb(244, 244, 244);
+  --buttonColor: rgb(87, 87, 87);
+  --shadow-color: rgba(255, 255, 255, 0.25);
+  --vgiBlue: rgb(64, 68, 131);
+  --vgiBlue75: rgba(64, 68, 131, .75);
+  --vgiBlue50: rgba(64, 68, 131, .5);
+  --vgiBlue25: rgba(64, 68, 131, .25);
+}
+
+body.dark {
+  @include darken();
+}

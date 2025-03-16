@@ -1,0 +1,98 @@
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--cardHighlight);
+  border-bottom-color: var(--textColor);
+  animation: rotation 1s linear infinite;
+}
+
+.profile {
+  position: relative;
+  background-size: cover;
+  height: 3.25rem;
+  width: 3.25rem;
+  cursor: pointer;
+}
+
+.profile-icon {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.profile-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.25rem;
+  width: 3.25rem;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: var(--vgiBlue75);
+}
+
+.profile:hover .profile-overlay {
+  opacity: 1;
+}
+
+.video-container{
+  aspect-ratio: 16 / 9;
+}
+
+.vod {
+  position: relative;
+  background-size: cover;
+  width: 45%;
+  cursor: pointer;
+}
+
+.vod-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+}
+
+.vod-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: var(--vgiBlue);
+}
+
+.vod:hover .vod-overlay {
+  opacity: 1;
+}
+
+.vod:hover .vod-icon {
+  filter: blur(3px);
+  clip-path: inset(0 0 0 0 round 15px);
+}
+
+.vod-text {
+  color: var(--cardColor);
+  font-weight: 700;
+  font-size: 1.25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

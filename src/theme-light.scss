@@ -1,0 +1,17 @@
+// mixin that enables css variables in light mode
+@mixin lighten() {
+  --bgColor: rgb(250, 250, 250);
+  --cardColor: rgb(255, 255, 255);
+  --cardHighlight: rgb(240, 240, 240);
+  --textColor: rgb(79, 79, 79);
+  --buttonColor: rgb(211, 211, 211);
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --vgiBlue: rgb(146, 213, 208);
+  --vgiBlue75: rgba(146, 213, 208, .75);
+  --vgiBlue50: rgba(146, 213, 208, .5);
+  --vgiBlue25: rgba(146, 213, 208, .25);
+}
+
+body.light {
+  @include lighten();
+}
