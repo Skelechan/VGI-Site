@@ -7,7 +7,7 @@
 </div>
 
 <!-- Streams Ready -->
-<div *ngIf="ready() && HasStreams()" class="d-flex flex-column flex-gap p-15">
+<div *ngIf="ready() && HasStreams()" class="d-flex flex-column flex-gap px-15">
   <!-- Video Container -->
   <div class="video-container">
     <iframe
@@ -21,14 +21,13 @@
   </div>
 
   <!-- Stream Info -->
-  <div class="d-flex flex-row justify-content-between">
+  <div class="d-flex flex-row justify-content-between mb-1">
     <h3 class="m0"><a href="https://twitch.tv/{{ selectedStream.displayName }}">{{ selectedStream.displayName }}</a></h3>
     <span>{{ selectedStream.gameName }}</span>
   </div>
 
   <!-- Other Streamers -->
   <div *ngIf="hasOtherStreamers()" class="d-flex flex-column flex-gap flex-center justify-content-center">
-    <hr>
     <strong class="mb-1">☆ Other Live Members ☆</strong>
     <div class="d-flex flex-gap-xl flex-row-gap-sm flex-row mb-1-125 flex-wrap justify-content-center">
       <ng-container *ngFor="let stream of otherStreams">
@@ -42,7 +41,7 @@
 </div>
 
 <!-- Vods Ready -->
-<div *ngIf="ready() && !HasStreams() && HasVods()" class="d-flex flex-column flex-gap p-15">
+<div *ngIf="ready() && !HasStreams() && HasVods()" class="d-flex flex-column flex-gap px-15">
   <div class="d-flex flex-column flex-center justify-content-center">
     <p>☆ Nobody is streaming right now ☆</p>
     <p>Why not check out a recent stream?</p>

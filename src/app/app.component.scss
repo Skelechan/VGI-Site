@@ -28,8 +28,13 @@
   padding: .375rem 1rem;
 }
 
+.logo-wrapper {
+  width: var(--image-width);
+}
+
 .logo-img {
-  width: 150px;
+  width: inherit;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   aspect-ratio: 104 / 64; /* Modern property for consistent scaling */

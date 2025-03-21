@@ -56,10 +56,12 @@ export class LiveComponent implements OnInit {
     this.GetStreams();
     this.GetVods();
   }
+
   private GetStreams() {
     this.http.get<TwitchStream[]>('https://api.insidevgi.com/twitch/streams').subscribe({
         next: (streams) =>  {
           this._streams = streams
+
           if(this._streams.length > 0)
             this._selectedStream = this._streams[0].displayName;
         },
