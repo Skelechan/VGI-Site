@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {HomeComponent} from '../home/home.component';
 import {LiveComponent} from '../live-view/live.component';
@@ -10,8 +10,14 @@ import {NavigationComponent} from '../navigation/navigation.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'VGI';
+
+  ngOnInit(): void {
+    // Set the initial theme based on user preference or default to light
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.body.classList.add(prefersDark ? 'dark' : 'light');
+  }
 
   public changeTheme() {
     document.body.classList.toggle("dark");

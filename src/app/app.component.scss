@@ -1,11 +1,18 @@
 /* Main Content Styles */
 .main-content {
   position: relative;
+  transition: opacity 1.25s ease 0s,transform 1.25s ease 0s
 }
 
 .inner{
   max-width: 100%;
   position: relative;
+}
+
+.theme_setting {
+  position: absolute;
+  left: 0;
+  top:0;
 }
 
 .info-card {

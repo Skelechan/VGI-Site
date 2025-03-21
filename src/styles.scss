@@ -1,3 +1,8 @@
+@import "variables";
+@import "utility-styles";
+@import "theme-dark";
+@import "theme-light";
+
 :root {
   --border-radius: 0.5rem;
   --transition-duration: 0.3s;

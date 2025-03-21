@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
+import {Router, RouterLink} from '@angular/router';
+import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-navigation',
-  imports: [],
+  imports: [
+    NgIf,
+    RouterLink
+  ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
-  public changeTheme() {
-    document.body.classList.toggle("dark");
-    document.body.classList.toggle("light");
+  constructor(protected router: Router) {
   }
 }
