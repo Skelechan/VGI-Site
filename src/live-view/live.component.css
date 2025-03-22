@@ -3,7 +3,6 @@
   height: 48px;
   border: 5px solid var(--cardHighlight);
   border-bottom-color: var(--textColor);
-  animation: rotation 1s linear infinite;
 }
 
 .profile {
@@ -88,11 +87,4 @@
   text-align: center;
 }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+

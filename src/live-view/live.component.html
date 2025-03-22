@@ -2,12 +2,12 @@
 <div *ngIf="!ready()" class="d-flex flex-center justify-content-center">
   <div class="d-flex flex-gap flex-column flex-center justify-content-center mb-1">
     <p>☆ Hold on a moment ☆</p>
-    <span class="loader rounded"></span>
+    <span class="loader rounded infinite-rotation"></span>
   </div>
 </div>
 
 <!-- Streams Ready -->
-<div *ngIf="ready() && HasStreams()" class="d-flex flex-column flex-gap px-15">
+<div *ngIf="ready() && HasStreams()" class="d-flex flex-column flex-gap px-15 scale-up-center">
   <!-- Video Container -->
   <div class="video-container">
     <iframe
@@ -41,7 +41,7 @@
 </div>
 
 <!-- Vods Ready -->
-<div *ngIf="ready() && !HasStreams() && HasVods()" class="d-flex flex-column flex-gap px-15">
+<div *ngIf="ready() && !HasStreams() && HasVods()" class="d-flex flex-column flex-gap px-15 scale-up-center">
   <div class="d-flex flex-column flex-center justify-content-center">
     <p>☆ Nobody is streaming right now ☆</p>
     <p>Why not check out a recent stream?</p>
@@ -59,7 +59,7 @@
   </div>
 </div>
 
-<div *ngIf="ready() && !HasStreams() && !HasVods()" class="d-flex flex-center justify-content-center">
+<div *ngIf="ready() && !HasStreams() && !HasVods()" class="d-flex flex-center justify-content-center scale-up-center">
   <div class="d-flex flex-column flex-center justify-content-center mb-1">
     <p>☆ Something went <i>very</i> wrong ☆</p>
     <p>Try again later</p>

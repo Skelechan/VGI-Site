@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
     // Set the initial theme based on user preference or default to light
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     document.body.classList.add(prefersDark ? 'dark' : 'light');
+    document.body.classList.remove('init');
   }
 
   public changeTheme() {

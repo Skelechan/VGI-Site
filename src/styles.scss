@@ -2,12 +2,13 @@
 @import "utility-styles";
 @import "theme-dark";
 @import "theme-light";
+@import "animations";
 
 :root {
   --border-radius: 0.5rem;
   --transition-duration: 0.3s;
   --gradientPercentage: 40%;
-  --image-width: 15rem;
+  --image-width: 30%;
 }
 
 * {
@@ -68,11 +69,11 @@ a:hover {
   color: var(--vgiBlue);
 }
 
-@media (max-width: 1680px) {
-  :root {
-    --image-width: 8rem;
-  }
+.cursor-pointer {
+  cursor: pointer;
+}
 
+@media (max-width: 1680px) {
   html {
     font-size: 9pt;
   }
@@ -81,5 +82,17 @@ a:hover {
 @media (max-width: 980px) {
   html {
     font-size: 8pt;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .init {
+    background: rgb(18, 18, 18);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .init {
+    background: rgb(250, 250, 250);
   }
 }

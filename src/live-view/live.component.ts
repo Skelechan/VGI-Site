@@ -60,16 +60,15 @@ export class LiveComponent implements OnInit {
   private GetStreams() {
     this.http.get<TwitchStream[]>('https://api.insidevgi.com/twitch/streams').subscribe({
         next: (streams) =>  {
+          this._streamsReady = true
           this._streams = streams
 
           if(this._streams.length > 0)
             this._selectedStream = this._streams[0].displayName;
         },
-        complete: () => {
-          this._streamsReady = true
-        },
         error: () => {
           console.error('Error getting streams');
+          this._streamsReady = true
         }
       }
     );
@@ -79,12 +78,11 @@ export class LiveComponent implements OnInit {
     this.http.get<TwitchVideo[]>('https://api.insidevgi.com/twitch/vods?size=4').subscribe({
         next: (streams) =>  {
           this._vods = streams
-        },
-        complete: () => {
           this._vodsReady = true
         },
         error: () => {
           console.error('Error getting Vods');
+          this._vodsReady = true
         }
       }
     );
