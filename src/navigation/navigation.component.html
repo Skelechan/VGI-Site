@@ -1,0 +1,20 @@
+<nav class="d-flex flex-column flex-gap navigation p-15">
+  <div><strong>Navigate here</strong></div>
+  <div class="d-flex flex-row flex-gap-sm p0 justify-content-center">
+    <a *ngIf="this.router.url !== '/'" routerLink="/" class="px-15 button">
+      <span>Home</span>
+    </a>
+    <a href="https://vvgi.carrd.co/#creators" class="px-15 button">
+      <span>Creators</span>
+    </a>
+    <a *ngIf="this.router.url !== '/live'" routerLink="/live" class="px-15 button">
+      <span>Live NOW</span>
+    </a>
+    <a href="https://vvgi.carrd.co/#members" class="px-15 button">
+      <span>Members</span>
+    </a>
+    <a href="https://vvgi.carrd.co/#credit" class="px-15 button">
+      <span>Credit</span>
+    </a>
+  </div>
+</nav>

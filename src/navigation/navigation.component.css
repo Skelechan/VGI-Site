@@ -1,0 +1,22 @@
+/* Navigation */
+.navigation {
+  background: var(--cardHighlight);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.button {
+  background: var(--bgColor);
+  color: var(--textColor);
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 2rem;
+  height: 2rem;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--vgiBlue);
+  transform: translateY(-2px);
+  cursor: pointer;
+}

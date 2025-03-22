@@ -1,0 +1,34 @@
+<div class="theme_setting cursor-pointer">
+  <div (click)="changeTheme()" class="px-15 button">
+    <span>Change Theme</span>
+  </div>
+</div>
+
+<main class="d-flex flex-center justify-content-center main-content w-100 mb-1 z-1 scale-up-center">
+  <div class="inner w-33">
+    <!-- Card Section -->
+    <section class="d-flex flex-column info-card mb-1-125">
+      <!-- Header Section -->
+      <header class="d-flex flex-row card-summary-header text-left">
+        <div class="d-flex flex-row flex-gap flex-end">
+          <div class="m0 p0 d-flex logo-wrapper">
+            <img class="logo-img" src="logo.png" alt="VGI Logo"/>
+          </div>
+          <div class="flex-grow">
+            <h1 class="m0">VGI</h1>
+            <p class="content-summary-text m0 mb-1">
+              Unofficial Content Creator Circle
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <hr>
+      <!-- Body Section -->
+      <router-outlet></router-outlet>
+    </section>
+
+    <!-- Navigation Links -->
+    <app-navigation></app-navigation>
+  </div>
+</main>

@@ -1,0 +1,47 @@
+/* Main Content Styles */
+.main-content {
+  position: relative;
+  transition: opacity 1.25s ease 0s,transform 1.25s ease 0s
+}
+
+.inner{
+  max-width: 100%;
+  position: relative;
+}
+
+.theme_setting {
+  position: absolute;
+  left: 0;
+  top:0;
+}
+
+.info-card {
+  background: var(--cardColor);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 0.125rem 0.125rem 0 var(--shadow-color);
+}
+
+/* Card Header */
+.card-summary-header {
+  background: linear-gradient(180deg, var(--cardHighlight) var(--gradientPercentage), var(--cardColor) var(--gradientPercentage));
+  padding: .375rem 1rem;
+}
+
+.logo-wrapper {
+  max-width: var(--image-width);
+}
+
+.logo-img {
+  width: inherit;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 104 / 64; /* Modern property for consistent scaling */
+}
+
+.content-summary-text {
+  color: var(--secondary-color);
+}
+
+
